@@ -24,7 +24,7 @@ function displayResults(responseJson) {
     console.log(this);
   });
   $(responseJson.message).each(function() {
-    $('.results-img').html(`<img src="${this}" class="results-img">`)
+    $('figure').prepend(`<img src="${this}" class="results-img">`)
   });
   //display the results section
   $('.results').removeClass('hidden');
