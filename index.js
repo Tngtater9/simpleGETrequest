@@ -18,11 +18,8 @@ function getHowManyDogs() {
 }
 
 function displayResults(responseJson) {
-  console.log(responseJson);
   //replace the existing image with the new ones
-  $(responseJson.message).each(function() {
-    console.log(this);
-  });
+  $('figure').empty();
   $(responseJson.message).each(function() {
     $('figure').prepend(`<img src="${this}" class="results-img">`)
   });
